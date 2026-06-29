@@ -14,8 +14,9 @@ export const InputWords = ({setTimer, setStarted, words, setWords, lastWord, set
         }
     };
 
-    function validate() {
-        const result = validateWord(word, lastWord, words);
+    async function validate() {
+        setError("Validando...")
+        const result = await validateWord(word, lastWord, words);
         if (result.valid) {
             setStarted(true)
             setTimer(15)
