@@ -1,0 +1,71 @@
+.main-page-bg {
+background-image: url("src/assets/images/mario-background.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.main-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100ch;
+    width: auto;
+    padding-top: 5%;
+}
+
+p {
+    margin: 0;
+}
+
+.cuadrado {
+    background-color: orangered;
+    border-left: 5px blanchedalmond solid;
+    border-top: 5px blanchedalmond solid;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 3px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-family: "Mario-Title", sans-serif;
+    color: bisque;
+    text-shadow: 3px 5px black;
+    font-size: 100px;
+    margin: 0;
+}
+
+.option-text {
+    font-family: "Mario-Text", sans-serif;
+    text-shadow: 1px 3px black;
+    color: white;
+    font-size: 45px;
+    padding: 5px;
+}
+button {
+    background-color: rgba(250, 235, 215, 0);
+    border-width: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: blanchedalmond;
+    transform: scale(115%);
+}
+
+.max-points-text {
+    font-family: "Mario-Text", sans-serif;
+    text-shadow: 3px 2px white;
+    color: black;
+    font-size: 45px;
+    padding-top: 150px;
+}
