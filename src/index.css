@@ -19,3 +19,10 @@ p {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Pixel-Text";
+    src: url("./assets/fonts/PixelPurl.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,55 @@
+.words-container {
+    background-color: navy;
+    box-shadow: 2px 2px black, -2px -2px white;
+    color: white;
+    min-width: 380px;
+    width: 70%;
+    text-align: left;
+    min-height: 20%;
+    max-height: 28%;
+    overflow-y: auto;
+}
+
+.words-used-title {
+    text-align: left;
+    padding: 1%;
+    text-decoration: underline white 1px;
+}
+
+.listed-words-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.grid-item {
+    margin-left: 15%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1325px) {
+    .listed-words-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        align-items: flex-start;
+    }
+    .grid-item {
+        margin-left: 2%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .listed-words-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+        align-items: flex-start;
+    }
+    .grid-item {
+        margin-left: 8%;
+        text-align: left;
+    }
+}
