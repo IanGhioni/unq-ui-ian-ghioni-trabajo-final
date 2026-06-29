@@ -3,13 +3,15 @@ import { Hudbar } from "../components/HudBar"
 import { InputWords } from "../components/InputWords"
 import "../styles/playPage.css"
 import { UsedWords } from "../components/UsedWords"
+import { GameOverModal } from "../components/GameOverModal"
 
 export const PlayPage = () => {
     const [points, setPoints] = useState(0)
-    const [timer, setTimer] = useState(0)
+    const [timer, setTimer] = useState("xx")
     const [words, setWords] = useState([])
     const [isStarted, setIsStarted] = useState(false)
     const [lastWord, setLastWord] = useState('')
+    const [gameOver, setGameOver] = useState(false)
 
     useEffect(() => {
         if (isStarted) {
@@ -22,14 +24,20 @@ export const PlayPage = () => {
     }, [isStarted])
 
     useEffect(() => {
-        if (timer === 0) {
+        if (isStarted && timer === 0) {
             setIsStarted(false)
+            setGameOver(true)
         }
     }, [timer]);
 
     return(
         <div className="play-bg">
             <Hudbar time={timer} points={points} />
+            <GameOverModal 
+                isGameOver={gameOver} 
+                points={points} 
+                wordsCount={words.length}
+            />
             <div className="play-container">
                 <InputWords 
                     setTimer={setTimer}
