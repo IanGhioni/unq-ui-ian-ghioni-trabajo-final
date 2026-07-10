@@ -17,7 +17,6 @@ export const MainPage = () => {
             <button className="option-text">
                 LEADERBOARD
             </button>
-            <p className="max-points-text">Puntaje maximo - XXXXXX</p>
         </div>
         </div>
     )

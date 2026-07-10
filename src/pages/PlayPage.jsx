@@ -11,7 +11,7 @@ export const PlayPage = () => {
     const [words, setWords] = useState([])
     const [isStarted, setIsStarted] = useState(false)
     const [lastWord, setLastWord] = useState('')
-    const [gameOver, setGameOver] = useState(false)
+    const [gameOver, setGameOver] = useState(true)
 
     useEffect(() => {
         if (isStarted) {
