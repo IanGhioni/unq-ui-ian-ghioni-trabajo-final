@@ -12,12 +12,12 @@ export const GameOverModal = ({isGameOver, points, wordsCount}) => {
                 <p className="gameOver-title text-shadow">Fin del juego</p>
                 <div className="modal-content-sides">
                         <div className="stats-container">
-                            <p className="stats-text text-align-left">Puntos</p>
-                            <p className="stats-text">{points}</p>
+                            <p className="stats-text text-align-left gameOver-text">Puntos</p>
+                            <p className="stats-text gameOver-text">{points}</p>
                         </div>
                         <div className="stats-container">
-                            <p className="stats-text text-align-left">Cant de palabras</p>
-                            <p className="stats-text">{wordsCount}</p>
+                            <p className="stats-text text-align-left gameOver-text">Cant de palabras</p>
+                            <p className="stats-text gameOver-text">{wordsCount}</p>
                         </div>
                     <div className="linea" />
                     <div className="button-container">

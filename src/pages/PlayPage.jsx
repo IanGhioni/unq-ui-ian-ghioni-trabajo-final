@@ -4,6 +4,7 @@ import { InputWords } from "../components/InputWords"
 import "../styles/playPage.css"
 import { UsedWords } from "../components/UsedWords"
 import { GameOverModal } from "../components/GameOverModal"
+import { saveScore } from "../utils/saveScore"
 
 export const PlayPage = () => {
     const [points, setPoints] = useState(0)
@@ -11,7 +12,7 @@ export const PlayPage = () => {
     const [words, setWords] = useState([])
     const [isStarted, setIsStarted] = useState(false)
     const [lastWord, setLastWord] = useState('')
-    const [gameOver, setGameOver] = useState(true)
+    const [gameOver, setGameOver] = useState(false)
 
     useEffect(() => {
         if (isStarted) {
@@ -27,6 +28,7 @@ export const PlayPage = () => {
         if (isStarted && timer === 0) {
             setIsStarted(false)
             setGameOver(true)
+            saveScore(points)
         }
     }, [timer]);
 
