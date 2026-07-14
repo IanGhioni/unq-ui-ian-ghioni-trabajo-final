@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-family: "Pixel-Text", sans-serif;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.text-black-shadow {
+    text-shadow: 2px 2px black;
+}
+
+.input-text {
+    background-color: orangered;
+    border-style: none;
+    color: white;
+    box-shadow: 2px 2px black, -2px -2px white;
+    font-family: "Pixel-Text", sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: xx-large;
+    padding: 10px;
+    min-width: 350px;
+    width: 35vw;
+    text-align: center;
+    margin-bottom: 25px;
+    height: 1.5rem;
+}
+
+.input-text::placeholder {
+    color: white;
+    text-align: center;
+}
+
+.input-text:focus {
+    outline: none;
+    box-shadow: 2px 2px white, -2px -2px black;;
+}
+
+.input-text:focus::placeholder {
+    opacity: 0; 
+}
+
+.error-container {
+    height: 2rem;
+    padding-bottom: 12px;
+}
+
+.error-text {
+    font-size: 1.8rem;
+    color: crimson;
+    text-shadow: 2px 2px black, -2px -2px black, 2px -2px black;
+} 
+

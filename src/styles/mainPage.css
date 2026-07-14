@@ -1,0 +1,108 @@
+.main-page-bg {
+    background-image: url("src/assets/images/mario-background.png");
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    text-shadow: 2px 2px black;
+    font-size: xx-large;
+}
+
+.cuadrado {
+    background-color: orangered;
+    border-left: 5px blanchedalmond solid;
+    border-top: 5px blanchedalmond solid;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+
+    padding: 1rem 3rem;
+
+    width: min(90vw, fit-content);
+    text-align: center;
+}
+
+h2 {
+    font-family: "Mario-Title", sans-serif;
+    color: bisque;
+    text-shadow: 3px 5px black;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0;
+}
+
+.option-text {
+    font-family: "Mario-Text", sans-serif;
+    color: white;
+    text-shadow: 1px 3px black;
+
+    font-size: clamp(2rem, 2.5vw, 1.9rem);
+
+    padding: .1rem;
+}
+button {
+    background-color: rgba(250, 235, 215, 0);
+    border-width: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: blanchedalmond;
+    transform: scale(115%);
+}
+
+.leaderboard-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2%;
+    padding: 1%;
+}
+ol {
+    font-family: "Mario-Text", sans-serif;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: large;
+    text-align: left;
+}
+.leaderboard-title {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+@media screen and (max-width: 723px) {
+    .leaderboard-side {
+        margin: 2%;
+        left: auto;
+        width: 65%;
+        padding: 0%;
+        height: auto;
+    }
+    .leaderboard-side ol {
+        columns: 2;
+        column-gap: 40px;
+    }
+    ol {
+        text-align: left;
+    }
+}

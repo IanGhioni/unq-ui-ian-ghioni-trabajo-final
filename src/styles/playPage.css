@@ -1,0 +1,21 @@
+.play-bg {
+    background-image: url("src/assets/images/water-bg.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.hud-text {
+    font-family: "Mario-text" sans-serif;
+}
+
+.play-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 25px;
+}
