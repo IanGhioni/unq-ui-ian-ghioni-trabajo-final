@@ -19,7 +19,7 @@ export const InputWords = ({setTimer, setStarted, words, setWords, lastWord, set
         const result = await validateWord(word, lastWord, words);
         if (result.valid) {
             setStarted(true)
-            setTimer(12005)
+            setTimer(15)
             setLastWord(word);
             setWords(prev => [word, ...prev])
             setError('')

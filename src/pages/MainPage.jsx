@@ -3,6 +3,7 @@ import { useNavigate } from "react-router"
 
 export const MainPage = () => {
     const navigate = useNavigate()
+    const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) ?? [];
 
     return(
         <div className="main-page-bg">
@@ -14,9 +15,16 @@ export const MainPage = () => {
             <button className="option-text" onClick={() => navigate("/play")}>
                 JUGAR
             </button>
-            <button className="option-text">
-                LEADERBOARD
-            </button>
+            <div className="cuadrado leaderboard-side">
+                <p className="leaderboard-title">Leaderboard</p>
+                {leaderboard.length == 0 ? 
+                <p>No hay puntajes aun</p>
+                :
+                <ol>
+                    {leaderboard.map((s) => <li>{s}</li>)}
+                </ol>
+                }
+            </div>
         </div>
         </div>
     )
