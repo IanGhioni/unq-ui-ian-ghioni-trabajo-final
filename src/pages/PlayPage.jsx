@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { Hudbar } from "../components/HudBar"
 import { InputWords } from "../components/InputWords"
 import "../styles/playPage.css"
@@ -14,6 +14,8 @@ export const PlayPage = () => {
     const [lastWord, setLastWord] = useState('')
     const [gameOver, setGameOver] = useState(false)
 
+    const gameOverRef = useRef(false);
+
     useEffect(() => {
         if (isStarted) {
             const interval = setInterval(() => {
@@ -26,6 +28,7 @@ export const PlayPage = () => {
 
     useEffect(() => {
         if (isStarted && timer === 0) {
+            gameOverRef.current = true;
             setIsStarted(false)
             setGameOver(true)
             saveScore(points)
@@ -49,6 +52,7 @@ export const PlayPage = () => {
                     lastWord={lastWord}
                     setLastWord={setLastWord}
                     setPoints={setPoints}
+                    gameOverRef={gameOverRef}
                 />
                 <UsedWords wordsUsed={words} />
             </div>
