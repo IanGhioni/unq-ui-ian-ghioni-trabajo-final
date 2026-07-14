@@ -2,7 +2,7 @@ import "../styles/inputWords.css"
 import { useState } from "react";
 import { validateWord } from "../utils/validateWord";
 
-export const InputWords = ({setTimer, setStarted, words, setWords, lastWord, setLastWord, setPoints}) => {
+export const InputWords = ({setTimer, setStarted, words, setWords, lastWord, setLastWord, setPoints, gameOverRef}) => {
 
     const [word, setWord] = useState('');
     const [error, setError] = useState(" ")
@@ -17,6 +17,10 @@ export const InputWords = ({setTimer, setStarted, words, setWords, lastWord, set
     async function validate() {
         setError("Validando...")
         const result = await validateWord(word, lastWord, words);
+        if (gameOverRef.current) {
+            setError('')
+            return;
+        }
         if (result.valid) {
             setStarted(true)
             setTimer(15)
